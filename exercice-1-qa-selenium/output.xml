@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4 (Python 3.12.2 on win32)" generated="2025-12-19T14:13:24.867061" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="C:\Users\asus\Desktop\POEI-ingenieur-test-QA\Chapitre-1-Selenium\selenium-automation-basics\exercice-1-qa-selenium\tests\login.robot">
+<kw name="Open Browser To Login Page" owner="keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-12-19T14:13:25.154552" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/login'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-12-19T14:13:25.154552" elapsed="2.791943"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-12-19T14:13:27.947919" elapsed="0.114790"/>
+</kw>
+<status status="PASS" start="2025-12-19T14:13:25.153554" elapsed="2.909155"/>
+</kw>
+<test id="s1-t1" name="Login With Valid Credentials" line="8">
+<kw name="Enter Username" owner="keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-19T14:13:28.064720" level="INFO">Typing text 'tomsmith' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-19T14:13:28.064720" elapsed="0.101615"/>
+</kw>
+<arg>tomsmith</arg>
+<status status="PASS" start="2025-12-19T14:13:28.063721" elapsed="0.102614"/>
+</kw>
+<kw name="Enter Password" owner="keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-19T14:13:28.167332" level="INFO">Typing text 'SuperSecretPassword!' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-19T14:13:28.167332" elapsed="0.130710"/>
+</kw>
+<arg>SuperSecretPassword!</arg>
+<status status="PASS" start="2025-12-19T14:13:28.166335" elapsed="0.131707"/>
+</kw>
+<kw name="Submit Login" owner="keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-12-19T14:13:28.299378" level="INFO">Clicking button 'css=button[type='submit']'.</msg>
+<arg>css=button[type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-19T14:13:28.299378" elapsed="0.359828"/>
+</kw>
+<status status="PASS" start="2025-12-19T14:13:28.298042" elapsed="0.362164"/>
+</kw>
+<kw name="Verify Login Success" owner="keywords">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>secure are</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-12-19T14:13:28.660206" elapsed="0.010566"/>
+</kw>
+<status status="PASS" start="2025-12-19T14:13:28.660206" elapsed="0.011848"/>
+</kw>
+<status status="PASS" start="2025-12-19T14:13:28.062709" elapsed="0.609345"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-12-19T14:13:28.673371" elapsed="2.131012"/>
+</kw>
+<status status="PASS" start="2025-12-19T14:13:24.868161" elapsed="5.936222"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Login" id="s1" pass="1" fail="0" skip="0">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
