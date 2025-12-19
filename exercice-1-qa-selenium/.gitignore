@@ -1,0 +1,20 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Robot Framework outputs
+output.xml
+log.html
+report.html
+
+# Screenshots
+*.png
+screenshots/
+
+# Jenkins
+jenkins_home/
+
+# OS
+.DS_Store
+Thumbs.db
