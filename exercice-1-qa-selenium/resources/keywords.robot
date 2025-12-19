@@ -26,3 +26,6 @@ Submit Login
 
 Verify Login Success
     Wait Until Page Contains    secure are    timeout=10s
+
+Verify Login Error
+    Wait Until Page Contains   Your password is invalid!    timeout=10s
