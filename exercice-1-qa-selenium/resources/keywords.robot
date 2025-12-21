@@ -2,11 +2,15 @@
 Library    SeleniumLibrary
 
 *** Variables ***
-${URL}    https://the-internet.herokuapp.com/login
+${URL}      https://the-internet.herokuapp.com/login
+${BROWSER}  chrome
 
 *** Keywords ***
 Open Browser To Login Page
-    Open Browser    ${URL}    chrome    arguments=--headless,--no-sandbox,--disable-dev-shm-usage,--window-size=1920,1080
+    ${options}=    Create Dictionary
+    ...    args=--headless,--no-sandbox,--disable-dev-shm-usage
+
+    Open Browser    ${URL}    ${BROWSER}    options=${options}
 
 Enter Username
     [Arguments]    ${username}
@@ -20,7 +24,7 @@ Submit Login
     Click Button    css=button[type='submit']
 
 Verify Login Success
-    Wait Until Page Contains    secure area    timeout=10s
+    Wait Until Page Contains    Secure Area    timeout=10s
 
 Verify Login Error
     Wait Until Page Contains    Your password is invalid!    timeout=10s
