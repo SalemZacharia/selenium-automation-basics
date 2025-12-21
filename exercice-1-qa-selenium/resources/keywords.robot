@@ -10,8 +10,16 @@ ${BROWSER}  chrome
 *** Keywords ***
 
 Open Browser To Login Page 
-    Open Browser    ${URL}    ${BROWSER}
-    Maximize Browser Window
+   *** Keywords ***
+Open Browser To Login Page
+    ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys
+    Call Method    ${options}    add_argument    --headless=new
+    Call Method    ${options}    add_argument    --no-sandbox
+    Call Method    ${options}    add_argument    --disable-dev-shm-usage
+    Call Method    ${options}    add_argument    --window-size=1920,1080
+
+    Create Webdriver    Chrome    options=${options}
+    Go To    ${URL}
 
 Enter Username
     [Arguments]    ${username}
