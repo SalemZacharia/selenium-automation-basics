@@ -6,7 +6,7 @@ ${URL}    https://the-internet.herokuapp.com/login
 
 *** Keywords ***
 Open Browser To Login Page
-    Open Browser    ${URL}    chrome    options=--headless,--no-sandbox,--disable-dev-shm-usage,--window-size=1920,1080
+    Open Browser    ${URL}    chrome    arguments=--headless,--no-sandbox,--disable-dev-shm-usage,--window-size=1920,1080
 
 Enter Username
     [Arguments]    ${username}
