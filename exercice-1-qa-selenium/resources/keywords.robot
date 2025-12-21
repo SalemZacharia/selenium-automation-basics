@@ -8,9 +8,6 @@ ${URL}      https://the-internet.herokuapp.com/login
 ${BROWSER}  chrome
 
 *** Keywords ***
-
-Open Browser To Login Page 
-   *** Keywords ***
 Open Browser To Login Page
     ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys
     Call Method    ${options}    add_argument    --headless=new
