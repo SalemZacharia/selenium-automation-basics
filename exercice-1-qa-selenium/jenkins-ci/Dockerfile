@@ -27,4 +27,7 @@ RUN echo "deb [arch=amd64 signed-by=/usr/share/keyrings/google-linux.gpg] http:/
 # Installer Chrome
 RUN apt-get update && apt-get install -y google-chrome-stable
 
+RUN apt-get install -y python3 python3-venv python3-pip && \
+    apt-get clean
+    
 USER jenkins
