@@ -7,12 +7,8 @@ ${BROWSER}  chrome
 
 *** Keywords ***
 Open Browser To Login Page
-    Open Browser    ${URL}    ${BROWSER}
-    ...    options=add_argument(--headless)
-    ...    options=add_argument(--no-sandbox)
-    ...    options=add_argument(--disable-dev-shm-usage)
-    ...    options=add_argument(--window-size=1920,1080)
-    Maximize Browser Window
+    Open Browser    ${URL}    chrome
+    ...    options=--headless,--no-sandbox,--disable-dev-shm-usage,--window-size=1920,1080
 
 Enter Username
     [Arguments]    ${username}
